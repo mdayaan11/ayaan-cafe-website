@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic Reset & Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* Using Inter as a modern default, can be replaced with custom fonts */
+  @apply bg-gray-50 text-gray-800 antialiased;
+}
+
+/* Custom CSS Variables (Optional, can be integrated with Tailwind config) */
+:root {
+  --primary-color: #6f4e37; /* Coffee/Brown */
+  --secondary-color: #f5e6d3; /* Light Cream */
+  --accent-color: #a0522d; /* Terracotta/Warm Orange */
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --light-gray: #f9fafb;
+  --border-color: #e5e7eb;
+}
+
+/* Apply variables to Tailwind's default colors if needed, or use directly */
+/* Example: */
+/* .text-primary { color: var(--primary-color); } */
+/* .bg-secondary { background-color: var(--secondary-color); } */
+
+/* Custom Utilities (if any, otherwise rely on Tailwind) */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-primary-color/50;
+}
+
+/* Hide scrollbar for specific elements if needed, but keep functionality */
+/* Example: */
+/* .hide-scrollbar::-webkit-scrollbar { display: none; } */
+/* .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; } */
